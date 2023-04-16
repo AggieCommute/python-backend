@@ -1,4 +1,5 @@
 from flask import Flask, request
+import os
 
 app = Flask(__name__)
 
@@ -8,4 +9,4 @@ def print_request():
     return 'OK'
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host="0.0.0.0", port=os.getenv('PORT'))
