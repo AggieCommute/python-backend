@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['POST'])
 def print_request():
-    print(request.json)
+    print(request.get_data())
     return 'OK'
 
 if __name__ == '__main__':
